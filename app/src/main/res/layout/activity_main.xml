@@ -20,8 +20,9 @@
         android:id="@+id/btn_hello_text_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClick_btn_hello_text_change"
         android:text="Button"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="523dp" />
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="499dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
