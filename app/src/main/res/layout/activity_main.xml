@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
 
     <Button
         android:id="@+id/btn_hello_text_change"
@@ -24,5 +26,158 @@
         android:text="Button"
         tools:layout_editor_absoluteX="159dp"
         tools:layout_editor_absoluteY="499dp" />
+
+    <TextView
+        android:id="@+id/txt_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.투자금"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <TextView
+        android:id="@+id/txt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.보증금"
+        app:layout_constraintStart_toStartOf="@+id/txt_0"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.대출금"
+        app:layout_constraintStart_toStartOf="@+id/txt_1"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <TextView
+        android:id="@+id/txt_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.대출 금리"
+        app:layout_constraintStart_toStartOf="@+id/txt_2"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <TextView
+        android:id="@+id/txt_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.대출 이자/월"
+        app:layout_constraintStart_toStartOf="@+id/txt_3"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <TextView
+        android:id="@+id/txt_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.대출 이자/년"
+        app:layout_constraintStart_toStartOf="@+id/txt_4"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <TextView
+        android:id="@+id/txt_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6.월세"
+        app:layout_constraintStart_toStartOf="@+id/txt_5"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/txt_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7.수익률"
+        app:layout_constraintStart_toStartOf="@+id/txt_6"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <TextView
+        android:id="@+id/txt_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.수익금/년"
+        app:layout_constraintStart_toStartOf="@+id/txt_7"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <EditText
+        android:id="@+id/editTxt_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editTxt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_0"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_0" />
+
+    <EditText
+        android:id="@+id/editTxt_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_1"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_1" />
+
+    <EditText
+        android:id="@+id/editTxt_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_2"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_2" />
+
+    <EditText
+        android:id="@+id/editTxt_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_3"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_3" />
+
+    <EditText
+        android:id="@+id/editTxt_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_4"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_4" />
+
+    <EditText
+        android:id="@+id/editTxt_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_5"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_5" />
+
+    <EditText
+        android:id="@+id/editTxt_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_6"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_6" />
+
+    <EditText
+        android:id="@+id/editTxt_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTxt_7"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
