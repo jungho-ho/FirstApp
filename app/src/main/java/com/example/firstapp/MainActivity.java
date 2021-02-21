@@ -20,35 +20,32 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_btn_hello_text_change(View view) {
         TextView textView = (TextView) findViewById(R.id.txt_hello);
         textView.setText("It's beginnig!");
-        check_editText();
+        check_editText();//공백 확인.
+
     }
 
     private void check_editText(){
-
-//        ViewGroup viewGroup = (ViewGroup)findViewById(R.id.rootView);
-//        viewGroup.getChildCount();
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        EditText edittText;
+        EditText[] edittText = new EditText[9];
+        int etID;
+        TextView[] ttView = new TextView[9];
+        int tvID;
 
-        for(int i=0; i < 9; i++ ){
-            edittText = (EditText)findViewById(R.id.editTxt_ + i);
-            if(edittText.getText().toString() == ""){
-//                builder.setTitle("확인하세요.").setMessage(viewGroup.getChildCount());
-                builder.setTitle("확인하세요.").setMessage(edittText.getId() + "가 공백입니다.");
+        for(int i=0; i < edittText.length; i++ ){
+            etID = getResources().getIdentifier("editTxt_"+i, "id", getPackageName());
+            edittText[i] = (EditText)findViewById(etID);
+
+            tvID = getResources().getIdentifier("txt_"+i, "id", getPackageName());
+            ttView[i] = (TextView)findViewById(tvID);
+
+            if(edittText[i].length() == 0){
+                builder.setTitle("확인하세요.").setMessage(ttView[i].getText() + "(이)가 공백입니다.");
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
                 break;
             }
         }
 
-//        builder.setTitle("확인하세요.").setMessage(viewGroup.getChildCount());
-//
-//        AlertDialog alertDialog = builder.create();
-//
-//        alertDialog.show();
-
-        //for(TextInputEditText editText :
     }
 }
