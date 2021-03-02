@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,11 +20,14 @@ public class MainActivity extends AppCompatActivity {
     public void onClick_btn_hello_text_change(View view) {
         TextView textView = (TextView) findViewById(R.id.txt_hello);
         textView.setText("It's beginnig!");
-        check_editText();//공백 확인.
-        calcu_Percent();
+        if(check_editText()) {//공백 확인.
+            calcu_Percent();//필수가 공백이 아닐때만 처리 함. 필수 공백일 때, 걍 죽는 현상 발생.
+        }
     }
 
-    private void check_editText(){
+    private boolean check_editText(){
+        String Tag = "Log...";
+        String resultValue="";
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         EditText[] edittText = new EditText[9];
@@ -37,15 +41,19 @@ public class MainActivity extends AppCompatActivity {
 
             tvID = getResources().getIdentifier("txt_"+i, "id", getPackageName());
             ttView[i] = (TextView)findViewById(tvID);
-
-            if(edittText[i].length() == 0 && etID != 4 && etID != 5 && etID != 7 && etID != 8){
+            Log.v(Tag,ttView[i].getText().toString());
+            if(edittText[i].length() == 0 &&
+                    !ttView[i].getText().equals("4.대출 이자/월") &&
+                    !ttView[i].getText().equals("5.대출 이자/년") &&
+                    !ttView[i].getText().equals("7.수익률") &&
+                    !ttView[i].getText().equals("8.수익금/년")){
                 builder.setTitle("확인하세요.").setMessage(ttView[i].getText() + "(이)가 공백입니다.");
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
+                builder.show();
+                resultValue = "필수 입력값에 공백이 있습니다.";
                 break;
             }
         }
-
+        return (resultValue.equals("필수 입력값에 공백이 있습니다.") ? false : true);//공백
     }
 
     private void calcu_Percent(){
